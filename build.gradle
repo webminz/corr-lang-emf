@@ -1,0 +1,13 @@
+
+dependencies {
+    implementation project(':mdegraphlib')
+    implementation 'org.springframework:spring-context:5.3.3'
+    implementation 'org.eclipse.epsilon:org.eclipse.epsilon.eol.engine:2.2.0'
+    implementation 'org.eclipse.epsilon:org.eclipse.epsilon.emc.emf:2.2.0'
+    implementation 'org.eclipse.epsilon:org.eclipse.epsilon.evl.engine:2.2.0'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.30'
+    testCompile project(':mdegraphlib').sourceSets.test.output
+}
+
+

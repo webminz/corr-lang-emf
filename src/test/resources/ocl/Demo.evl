@@ -1,0 +1,8 @@
+
+context Tree {
+	constraint NotA {
+		check : self.label <> 'a'
+		message : 'A tree cannot be named a'
+	}	
+}
+
