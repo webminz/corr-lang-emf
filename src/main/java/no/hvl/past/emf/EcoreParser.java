@@ -212,6 +212,7 @@ public class EcoreParser implements EMFRegistry.URIToNameResolve {
 
 
     public EcoreSystem parse(InputStream inputStream, String fileName, Name name) throws EmfTechSpaceException {
+        this.builders.clear();
         try {
             // TODO extra URLs if defined in the EPackage
             XMLInputFactory xmlInputFactory = XMLInputFactory.newFactory();

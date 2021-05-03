@@ -46,6 +46,7 @@ public class EcoreDirectives implements TechSpaceDirective {
 
 
     public static final Set<String> OTHER_BASE_TYPES = Sets.newHashSet(
+            "EDate",
             "EByteArray",
             "EJavaObject",
             "EJavaClass"
