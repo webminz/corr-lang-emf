@@ -1,18 +1,15 @@
 package no.hvl.past.emf;
 
-import no.hvl.past.TestBase;
 import no.hvl.past.graph.*;
 import no.hvl.past.graph.elements.Triple;
 import no.hvl.past.graph.elements.Tuple;
 import no.hvl.past.graph.operations.Invert;
-import no.hvl.past.graph.plotting.PlantUMLPlotter;
 import no.hvl.past.graph.predicates.EnumValue;
 import no.hvl.past.graph.predicates.TargetMultiplicity;
 import no.hvl.past.names.Name;
 import no.hvl.past.systems.Sys;
 import org.junit.Test;
 
-import javax.xml.stream.XMLStreamException;
 import java.io.*;
 import java.util.Optional;
 import java.util.Set;

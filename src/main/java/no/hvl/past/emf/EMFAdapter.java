@@ -3,7 +3,7 @@ package no.hvl.past.emf;
 import no.hvl.past.di.PropertyHolder;
 import no.hvl.past.graph.GraphMorphism;
 import no.hvl.past.graph.Universe;
-import no.hvl.past.graph.trees.QueryHandler;
+import no.hvl.past.systems.QueryHandler;
 import no.hvl.past.graph.trees.XmlParser;
 import no.hvl.past.names.Name;
 import no.hvl.past.plugin.UnsupportedFeatureException;

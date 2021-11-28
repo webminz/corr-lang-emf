@@ -29,7 +29,7 @@ public class EcoreSystem extends Sys.Impl implements EMFRegistry.URIToNameResolv
             Map<Name, String> displayNames,
             EMFRegistry registry,
             Map<Triple, EContainment> containments) {
-        super(url, sketch, displayNames);
+        super(url, sketch, displayNames, new HashMap<>());
         this.registry = registry;
         this.containments = containments;
         this.packageBuilder = new EPackageFromSketchBuilder(this, registry);

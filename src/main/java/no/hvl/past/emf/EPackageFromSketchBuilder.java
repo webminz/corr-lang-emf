@@ -57,37 +57,40 @@ public class EPackageFromSketchBuilder {
         });
 
         system.types().forEach(name -> {
-            EClass eClass = (EClass) classifierMap.get(name);
+            if (classifierMap.get(name) instanceof EClass) {
+                EClass eClass = (EClass) classifierMap.get(name);
 
-            system.features(name).forEach(triple -> {
-                if (system.isAttributeType(triple)) {
-                    EAttribute eAttribute = ecoreFactory.createEAttribute();
-                    if (classifierMap.containsKey(triple.getTarget())) {
-                        eAttribute.setEType(classifierMap.get(triple.getTarget()));
-                    } else if (system.isStringType(triple.getTarget())) {
-                        eAttribute.setEType(EcorePackage.eINSTANCE.getEString());
-                    } else if (system.isIntType(triple.getTarget())) {
-                        eAttribute.setEType(EcorePackage.eINSTANCE.getEInt());
-                    } else if (system.isBoolType(triple.getTarget())) {
-                        eAttribute.setEType(EcorePackage.eINSTANCE.getEBoolean());
-                    } else if (system.isFloatType(triple.getTarget())) {
-                        eAttribute.setEType(EcorePackage.eINSTANCE.getEDouble());
+                system.features(name).forEach(triple -> {
+                    if (system.isAttributeType(triple)) {
+                        EAttribute eAttribute = ecoreFactory.createEAttribute();
+                        if (classifierMap.containsKey(triple.getTarget())) {
+                            eAttribute.setEType(classifierMap.get(triple.getTarget()));
+                        } else if (system.isStringType(triple.getTarget())) {
+                            eAttribute.setEType(EcorePackage.eINSTANCE.getEString());
+                        } else if (system.isIntType(triple.getTarget())) {
+                            eAttribute.setEType(EcorePackage.eINSTANCE.getEInt());
+                        } else if (system.isBoolType(triple.getTarget())) {
+                            eAttribute.setEType(EcorePackage.eINSTANCE.getEBoolean());
+                        } else if (system.isFloatType(triple.getTarget())) {
+                            eAttribute.setEType(EcorePackage.eINSTANCE.getEDouble());
+                        }
+
+                        // TODO multiplicities
+
+                        eClass.getEStructuralFeatures().add(eAttribute);
+                        featureMap.put(triple, eAttribute);
+                    } else {
+                        EReference eReference = ecoreFactory.createEReference();
+
+                        // TODO multiplicities
+
+
+                        eClass.getEStructuralFeatures().add(eReference);
+                        featureMap.put(triple, eReference);
                     }
+                });
+            }
 
-                    // TODO multiplicities
-
-                    eClass.getEStructuralFeatures().add(eAttribute);
-                    featureMap.put(triple, eAttribute);
-                } else {
-                    EReference eReference = ecoreFactory.createEReference();
-
-                    // TODO multiplicities
-
-
-                    eClass.getEStructuralFeatures().add(eReference);
-                    featureMap.put(triple, eReference);
-                }
-            });
 
 
         });
