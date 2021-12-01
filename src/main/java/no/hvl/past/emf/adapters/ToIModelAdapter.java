@@ -1,7 +1,6 @@
 package no.hvl.past.emf.adapters;
 
 import no.hvl.past.graph.trees.TypedTree;
-import no.hvl.past.systems.Sys;
 import org.eclipse.epsilon.common.util.StringProperties;
 import org.eclipse.epsilon.eol.compile.m3.Metamodel;
 import org.eclipse.epsilon.eol.exceptions.EolRuntimeException;

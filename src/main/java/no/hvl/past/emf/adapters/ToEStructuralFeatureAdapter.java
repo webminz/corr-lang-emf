@@ -1,7 +1,7 @@
 package no.hvl.past.emf.adapters;
 
+import io.corrlang.domain.Sys;
 import no.hvl.past.graph.elements.Triple;
-import no.hvl.past.systems.Sys;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;

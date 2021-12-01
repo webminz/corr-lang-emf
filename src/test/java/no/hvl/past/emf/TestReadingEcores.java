@@ -1,5 +1,6 @@
 package no.hvl.past.emf;
 
+import io.corrlang.domain.Sys;
 import no.hvl.past.graph.*;
 import no.hvl.past.graph.elements.Triple;
 import no.hvl.past.graph.elements.Tuple;
@@ -7,7 +8,6 @@ import no.hvl.past.graph.operations.Invert;
 import no.hvl.past.graph.predicates.EnumValue;
 import no.hvl.past.graph.predicates.TargetMultiplicity;
 import no.hvl.past.names.Name;
-import no.hvl.past.systems.Sys;
 import org.junit.Test;
 
 import java.io.*;

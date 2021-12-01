@@ -2,8 +2,8 @@ package no.hvl.past.emf;
 
 import com.google.common.collect.Sets;
 import no.hvl.past.names.Name;
-import no.hvl.past.techspace.TechSpaceDirective;
-import no.hvl.past.techspace.TechnologySpecificRules;
+import io.corrlang.plugins.techspace.TechSpaceDirective;
+import io.corrlang.plugins.techspace.TechnologySpecificRules;
 
 import java.util.Optional;
 import java.util.Set;

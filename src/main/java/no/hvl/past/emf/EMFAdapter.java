@@ -1,17 +1,18 @@
 package no.hvl.past.emf;
 
+import io.corrlang.domain.Data;
+import io.corrlang.domain.QueryHandler;
+import io.corrlang.domain.Sys;
 import no.hvl.past.di.PropertyHolder;
 import no.hvl.past.graph.GraphMorphism;
 import no.hvl.past.graph.Universe;
-import no.hvl.past.systems.QueryHandler;
 import no.hvl.past.graph.trees.XmlParser;
 import no.hvl.past.names.Name;
-import no.hvl.past.plugin.UnsupportedFeatureException;
-import no.hvl.past.systems.Data;
-import no.hvl.past.systems.Sys;
-import no.hvl.past.techspace.TechSpaceAdapter;
-import no.hvl.past.techspace.TechSpaceDirective;
-import no.hvl.past.techspace.TechSpaceException;
+import no.hvl.past.UnsupportedFeatureException;
+
+import io.corrlang.plugins.techspace.TechSpaceAdapter;
+import io.corrlang.plugins.techspace.TechSpaceDirective;
+import io.corrlang.plugins.techspace.TechSpaceException;
 
 import java.io.*;
 import java.net.URI;

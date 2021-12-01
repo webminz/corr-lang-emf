@@ -6,9 +6,7 @@ import no.hvl.past.graph.elements.Triple;
 import no.hvl.past.graph.operations.Invert;
 import no.hvl.past.graph.predicates.*;
 import no.hvl.past.graph.trees.Tree;
-import no.hvl.past.graph.trees.XmlParser;
 import no.hvl.past.names.Name;
-import no.hvl.past.systems.Sys;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;

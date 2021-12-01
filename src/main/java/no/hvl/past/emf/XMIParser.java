@@ -1,13 +1,11 @@
 package no.hvl.past.emf;
 
+import io.corrlang.domain.Sys;
 import no.hvl.past.graph.Graph;
-import no.hvl.past.graph.Sketch;
 import no.hvl.past.graph.elements.Triple;
 import no.hvl.past.graph.trees.*;
-import no.hvl.past.names.AnonymousIdentifier;
 import no.hvl.past.names.Identifier;
 import no.hvl.past.names.Name;
-import no.hvl.past.systems.Sys;
 import org.jetbrains.annotations.NotNull;
 
 import javax.xml.stream.XMLStreamException;

@@ -1,7 +1,7 @@
 package no.hvl.past.emf;
 
-import no.hvl.past.techspace.TechSpace;
-import no.hvl.past.techspace.TechSpaceException;
+import io.corrlang.plugins.techspace.TechSpace;
+import io.corrlang.plugins.techspace.TechSpaceException;
 
 public class EmfTechSpaceException  extends TechSpaceException {
 

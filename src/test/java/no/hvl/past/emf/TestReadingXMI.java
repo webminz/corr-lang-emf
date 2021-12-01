@@ -1,12 +1,11 @@
 package no.hvl.past.emf;
 
-import no.hvl.past.TestBase;
+import io.corrlang.domain.Sys;
 import no.hvl.past.graph.*;
 import no.hvl.past.graph.elements.Triple;
 import no.hvl.past.graph.trees.TypedTree;
 import no.hvl.past.graph.trees.XmlParser;
 import no.hvl.past.names.Name;
-import no.hvl.past.systems.Sys;
 import org.junit.Test;
 
 import java.io.File;

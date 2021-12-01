@@ -2,9 +2,9 @@ package no.hvl.past.emf;
 
 import no.hvl.past.di.PropertyHolder;
 import no.hvl.past.graph.Universe;
-import no.hvl.past.plugin.MetaRegistry;
-import no.hvl.past.techspace.TechSpaceAdapter;
-import no.hvl.past.techspace.TechSpaceAdapterFactory;
+import no.hvl.past.MetaRegistry;
+import io.corrlang.plugins.techspace.TechSpaceAdapter;
+import io.corrlang.plugins.techspace.TechSpaceAdapterFactory;
 import no.hvl.past.util.FileSystemUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 

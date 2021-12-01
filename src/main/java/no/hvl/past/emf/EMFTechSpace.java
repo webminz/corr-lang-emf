@@ -1,6 +1,6 @@
 package no.hvl.past.emf;
 
-import no.hvl.past.techspace.TechSpace;
+import io.corrlang.plugins.techspace.TechSpace;
 
 public class EMFTechSpace implements TechSpace {
 
