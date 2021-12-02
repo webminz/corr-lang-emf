@@ -7,7 +7,12 @@ dependencies {
     implementation 'org.eclipse.epsilon:org.eclipse.epsilon.eol.engine:2.2.0'
     implementation 'org.eclipse.epsilon:org.eclipse.epsilon.emc.emf:2.2.0'
     implementation 'org.eclipse.epsilon:org.eclipse.epsilon.evl.engine:2.2.0'
-    testCompile project(':mdegraphlib').sourceSets.test.output
+    testImplementation project(':mdegraphlib').sourceSets.test.output
 }
 
 
+test {
+    filter {
+        includeTestsMatching "no.hvl.past.emf.EcoreTestSuite*"
+    }
+}
