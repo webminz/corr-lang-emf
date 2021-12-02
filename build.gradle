@@ -2,11 +2,16 @@ plugins {
     id 'java-library'
 }
 
+configurations {
+    directDependencies
+}
+
 dependencies {
     implementation project(':corr-lang-core')
-    implementation 'org.eclipse.epsilon:org.eclipse.epsilon.eol.engine:2.2.0'
-    implementation 'org.eclipse.epsilon:org.eclipse.epsilon.emc.emf:2.2.0'
-    implementation 'org.eclipse.epsilon:org.eclipse.epsilon.evl.engine:2.2.0'
+    directDependencies 'org.eclipse.epsilon:org.eclipse.epsilon.eol.engine:2.2.0'
+    directDependencies 'org.eclipse.epsilon:org.eclipse.epsilon.emc.emf:2.2.0'
+    directDependencies 'org.eclipse.epsilon:org.eclipse.epsilon.evl.engine:2.2.0'
+    implementation configurations.directDependencies
     testImplementation project(':mdegraphlib').sourceSets.test.output
 }
 
@@ -15,4 +20,9 @@ test {
     filter {
         includeTestsMatching "io.corrlang.emfintegration.EcoreTestSuite*"
     }
+}
+
+task exportDependencies(type: Copy) {
+    from configurations.directDependencies
+    into "${buildDir}/extlibs"
 }
