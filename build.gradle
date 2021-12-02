@@ -13,6 +13,6 @@ dependencies {
 
 test {
     filter {
-        includeTestsMatching "no.hvl.past.emf.EcoreTestSuite*"
+        includeTestsMatching "io.corrlang.emfintegration.EcoreTestSuite*"
     }
 }
