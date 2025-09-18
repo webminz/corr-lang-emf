@@ -89,7 +89,7 @@ public class XMIParser {
             }
 
             @Override
-            public Node.Builder objectChild(Node.Builder parent, String fieldName) {
+            public TreeBuilder objectChild(TreeBuilder parent, String fieldName) {
                 if (parent.getElementName().equals(XMI_ELMENT)) {
                     Optional<Triple> rootType = metamodel.lookup(fieldName);
                     if (!rootType.isPresent()) {
@@ -127,21 +127,21 @@ public class XMIParser {
             }
 
             @Override
-            public void simpleChild(Node.Builder parent, String fieldName, boolean boolContent) {
+            public void simpleChild(TreeBuilder parent, String fieldName, boolean boolContent) {
                 super.simpleChild(parent, fieldName, boolContent);
             }
 
 
             @NotNull
             @Override
-            protected Name makeOID(Node.Builder parent, String field) {
+            protected Name makeOID(TreeBuilder parent, String field) {
                 int i = parent.peekNextIndex(field);
                return Name.identifier(field).index(i).childOf(parent.getElementName());
             }
 
 
             @Override
-            public void simpleChild(Node.Builder parent, String namespace, String name, String value) {
+            public void simpleChild(TreeBuilder parent, String namespace, String name, String value) {
                 if (namespace.equals("http://www.omg.org/XMI") && name.equals("id")) {
                     parent.changeElementName(Name.identifier(value));
                 } else if (namespace.equals("http://www.w3.org/2001/XMLSchema-instance") && name.equals("type")) {
@@ -157,7 +157,7 @@ public class XMIParser {
             }
 
             @Override
-            public void simpleChild(Node.Builder parent, String fieldName, String content) {
+            public void simpleChild(TreeBuilder parent, String fieldName, String content) {
                 if (parent instanceof TypedNode.Builder) {
                     TypedNode.Builder typedParent = (TypedNode.Builder) parent;
                     Name type = typedParent.getType();
