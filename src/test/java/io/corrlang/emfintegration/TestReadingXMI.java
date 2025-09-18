@@ -4,7 +4,6 @@ import io.corrlang.domain.Sys;
 import no.hvl.past.graph.*;
 import no.hvl.past.graph.elements.Triple;
 import no.hvl.past.graph.trees.TypedTree;
-import no.hvl.past.graph.trees.XmlParser;
 import no.hvl.past.names.Name;
 import org.junit.Test;
 
